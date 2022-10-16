@@ -32,7 +32,7 @@ struct Circle :  public PolyShape
 {
     virtual void Draw()
     {
-        std::cout << "\tdrawing a Circle from a virtual function - Polymorphism is COOL!\n";
+        std::cout << "\t\tdrawing a Circle from a virtual function - Polymorphism is COOL!\n";
     }
 };
 
@@ -40,7 +40,7 @@ struct Square :  public PolyShape
 {
     virtual void Draw()
     {
-        std::cout << "\tdrawing a Square from a virtual function - Polymorphism is COOL!\n";
+        std::cout << "\t\tdrawing a Square from a virtual function - Polymorphism is COOL!\n";
     }
 };
 
@@ -48,6 +48,6 @@ struct Rectangle :  public PolyShape
 {
     virtual void Draw()
     {
-        std::cout << "\tdrawing a Rectangle from a virtual function - Polymorphism is COOL!\n";
+        std::cout << "\t\tdrawing a Rectangle from a virtual function - Polymorphism is COOL!\n";
     }
 };

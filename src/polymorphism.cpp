@@ -2,7 +2,8 @@
 
 Polymorphism::Polymorphism()
 {
-      runPolymorphismExample();
+    std::cout << "Polymorphism Example:\n\n";
+    runPolymorphismExample();
 }
 
 Polymorphism::~Polymorphism()
@@ -15,21 +16,21 @@ void Polymorphism::drawShapes(std::list<Shape *>& shapes)
     std::list<Shape*>::iterator pShapeBegin = shapes.begin();
     std::list<Shape*>::iterator pEnd = shapes.end();
     
-    std::cout << "Drawing Shapes using switch case:\n";
+    std::cout << "\tDrawing Shapes using switch case:\n";
     for( ; pShapeBegin != pEnd; pShapeBegin++)
     {
         switch((*pShapeBegin)->m_type)
         {
             case e_Circle:
-                std::cout << "\tdrawing a Circle" << std::endl;
+                std::cout << "\t\tdrawing a Circle" << std::endl;
                 break;
             
             case e_Square:
-                std::cout << "\tdrawing a Square" << std::endl;
+                std::cout << "\t\tdrawing a Square" << std::endl;
                 break;
             
             case e_Rectangle:
-                std::cout << "\tdrawing a Rectangle" << std::endl;
+                std::cout << "\t\tdrawing a Rectangle" << std::endl;
                 break;
 
         }
@@ -38,7 +39,7 @@ void Polymorphism::drawShapes(std::list<Shape *>& shapes)
 
 void Polymorphism::drawPolyShapes(std::list<PolyShape*>& polyShapes)
 {
-    std::cout << "\nDrawing shapes using polymorphism:\n";
+    std::cout << "\n\tDrawing shapes using polymorphism:\n";
 
     std::list<PolyShape*>::iterator pShapeBegin = polyShapes.begin();
     std::list<PolyShape*>::iterator pEnd = polyShapes.end();
