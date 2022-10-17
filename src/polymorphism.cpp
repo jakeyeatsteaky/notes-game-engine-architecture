@@ -11,10 +11,14 @@ Polymorphism::~Polymorphism()
 
 }
 
-void Polymorphism::drawShapes(std::list<Shape *>& shapes)
+void Polymorphism::drawShapesWithoutPolymorphism(std::list<Shape *>& shapes)
 {
     std::list<Shape*>::iterator pShapeBegin = shapes.begin();
     std::list<Shape*>::iterator pEnd = shapes.end();
+
+    // The Switch case is a useful way for changing behavior based on the type created.  However, this requires the program to "know" of all the possible types.
+    // The polymorphic example allows the programmer to easily create more types, with different behavior by using the virtual Draw function rather than making 
+    // a new switch case.
     
     std::cout << "\tDrawing Shapes using switch case:\n";
     for( ; pShapeBegin != pEnd; pShapeBegin++)
@@ -62,7 +66,7 @@ void Polymorphism::runPolymorphismExample()
     Rectangle* poly_rectangle = new Rectangle();
     std::list<PolyShape *> polyShapeList = {poly_circle, poly_square, poly_circle, poly_rectangle};
 
-    drawShapes(shapeList);
+    drawShapesWithoutPolymorphism(shapeList);
     drawPolyShapes(polyShapeList);
 
 }

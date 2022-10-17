@@ -22,7 +22,7 @@ class Polymorphism
     public:
         Polymorphism();
         ~Polymorphism();
-        void drawShapes(std::list<Shape *>& shape);
+        void drawShapesWithoutPolymorphism(std::list<Shape *>& shape);
         void drawPolyShapes(std::list<PolyShape *>& polyShape);
         void runPolymorphismExample();
     
