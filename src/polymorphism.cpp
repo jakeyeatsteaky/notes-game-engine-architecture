@@ -1,5 +1,11 @@
 #include "polymorphism.hpp"
 
+#include <cassert>
+
+/*------------------------------------------------------------------------
+    Detailed notes on this example found in the header file
+------------------------------------------------------------------------*/
+
 Polymorphism::Polymorphism()
 {
     std::cout << "Polymorphism Example:\n\n";
@@ -23,6 +29,7 @@ void Polymorphism::drawShapesWithoutPolymorphism(std::list<Shape *>& shapes)
     std::cout << "\tDrawing Shapes using switch case:\n";
     for( ; pShapeBegin != pEnd; pShapeBegin++)
     {
+        assert((*pShapeBegin) != nullptr);  //When de-referencing a pointer, always check that it is not pointed to a nullptr
         switch((*pShapeBegin)->m_type)
         {
             case e_Circle:
@@ -47,6 +54,8 @@ void Polymorphism::drawPolyShapes(std::list<PolyShape*>& polyShapes)
 
     std::list<PolyShape*>::iterator pShapeBegin = polyShapes.begin();
     std::list<PolyShape*>::iterator pEnd = polyShapes.end();
+
+    assert((*pShapeBegin) != nullptr);  //When de-referencing a pointer, always check that it is not pointed to a nullptr
 
     for( ; pShapeBegin != pEnd; pShapeBegin++)
     {

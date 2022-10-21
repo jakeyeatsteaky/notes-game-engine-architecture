@@ -1,6 +1,16 @@
 #include <iostream>
 #include <list>
 
+/*------------------------------------------------------------------------
+    This example shows the difference between using a switch statement 
+    to handle different behavior across different objects versus using
+    polymorphism to simplify this problem.
+
+    Polymorphism also offers the benefit of the function not needing 
+    to "know" what the object is in order for it to be added to this
+    family of objects.
+------------------------------------------------------------------------*/
+
 enum Type{e_Circle, e_Square, e_Rectangle};
 
 struct Shape
