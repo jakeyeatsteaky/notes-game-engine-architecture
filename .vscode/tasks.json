@@ -6,10 +6,15 @@
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
+                "-Iinclude",
+                "--std=c++17",
+                "-Wall",
+                "-O0",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "src/\\*.cpp"
             ],
             "options": {
                 "cwd": "${fileDirname}"

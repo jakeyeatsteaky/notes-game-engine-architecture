@@ -6,7 +6,6 @@
 int main()
 {
     new Polymorphism(); // class constructor runs the example function
-    linkage::runExperiment();
     return 0;
 }
 
